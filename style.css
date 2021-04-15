@@ -1,0 +1,82 @@
+*{
+margin:0;
+padding:0;
+font-family: sans-seriff;
+color:white;
+}
+.container{
+           width:100%;
+            height:100%;
+            
+}
+.ul{
+              display: inline-flex;
+               margin: 30px;
+}
+.menu ul li{
+               list-style:none;
+               margin: 0 20px;
+               color: white;
+              cursor: pointer;
+}
+.logo img {
+               width:40px;
+              
+                margin-top: -7px;
+                margin-right:48px;
+}
+.active{
+           color: white !important ;
+}
+.signup-btn{
+           top: 40px;
+           right: 80px;
+           position: absolute;
+            text-decoration: none;      
+}
+.signin-btn{
+           top: 40px;
+           right: 20px;
+           position: absolute;
+            text-decoration: none;
+            color: white;
+border:2px solid transparent;
+border-radius: 20px;
+background-image: linear-gradient(),radial-gradient(circle at top left,#fd00da,#19d7f8);
+background-origin: border-box;
+background-clip: border-box,content-box;
+}
+
+.signup-btn{
+           top: 40px;
+           right: 80px;
+           position: absolute;
+            text-decoration: none;
+            color: white;
+    
+border:2px solid transparent;
+border-radius: 20px;
+background-image: linear-gradient(),radial-gradient(circle at top left,#fd00da,#19d7f8);
+background-origin: border-box;
+background-clip: border-box,content-box;
+}
+.social-icons{
+right: 72px;
+bottom: 35px;
+position: absolute;
+}
+.social-icons ul li{
+    list-style: none;
+    margin-top: 15px;
+    text-align: center;
+}
+.social-icons ul li a{
+  color:#999;
+    border-radius: 50%;
+    border: 1px solid #999;
+    padding: 5px;
+    display: none;
+}
+
+
+

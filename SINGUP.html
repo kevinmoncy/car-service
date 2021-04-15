@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SIGNUP</title>
+<style>
+body
+{
+    min-height: 100vh;
+    background-image: url( "images/admin.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+table
+{
+font-family:monospace;
+font-size:15px;
+}
+    .error{
+  color: red;
+  font-size: 12px;
+}
+</style>
+  <script>
+          function myname()
+          {
+          var n=document.getElementById("txt1");
+          var letter=/[A-Za-z]+$/;
+          if(n.value == "")
+          {
+            document.getElementById("consid").innerHTML = "<span class='error'>Please enter a valid name</span>";
+
+                return false;
+        }
+        else if(!n.value.match(letter))
+          {
+            document.getElementById("consid").innerHTML = "<span class='error'>This is not a valid name. Please try again</span>";
+            document.getElementById("txt1").value="";
+
+                return false;
+          }
+          else if(n.value.match(letter))
+          {
+              document.getElementById("consid").innerHTML = "<span class='error'></span>";
+              return false;
+          }
+        }
+        function myaddress()
+        {
+          var n=document.getElementById("textarea1");
+          var letter=/[A-Za-z(), ]+$/;
+          if(n.value == "")
+          {
+            document.getElementById("consid3").innerHTML = "<span class='error'>Please enter a valid Address</span>";
+
+                return false;
+        }
+        else if(!n.value.match(letter))
+          {
+            document.getElementById("consid3").innerHTML = "<span class='error'>This is not a valid address. Please try again</span>";
+            document.getElementById("textarea1").value="";
+                return false;
+          }
+          else if(n.value.match(letter))
+          {
+              document.getElementById("consid3").innerHTML = "<span class='error'></span>";
+              return false;
+          }
+        }
+        function myphno()
+        {
+          var n4=document.getElementById("phno");
+          var p= /^[0-9]{1,10}$/;
+          if(n4.value == "")
+          {
+            document.getElementById("consid6").innerHTML = "<span class='error'>Please enter a valid Phone number</span>";
+
+                return false;
+        }
+        if(!n4.value.match(p))
+        {
+          document.getElementById("consid6").innerHTML = "<span class='error'>This is not a valid Phone number. Please try again</span>";
+          document.getElementById("phno").value="";
+              return false;
+        }
+        else if(n4.value.match(p))
+            {
+              document.getElementById("consid6").innerHTML = "<span class='error'></span>";
+                  return false;
+            }
+        }
+        function myemail()
+        {
+          var n=document.getElementById("inputEmail");
+          var e=/\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          if(n.value == "")
+          {
+            document.getElementById("consid4").innerHTML = "<span class='error'>Please enter a valid email Address</span>";
+
+                return false;
+        }
+        else if(!n.value.match(e))
+          {
+            document.getElementById("consid4").innerHTML = "<span class='error'>This is not a valid email address. Please try again</span>";
+            document.getElementById("inputEmail").value="";
+                return false;
+          }
+        else if(n.value.match(e))
+            {
+              document.getElementById("consid4").innerHTML = "<span class='error'></span>";
+                  return false;
+            }
+        }
+        function myusername()
+        {
+          var n5=document.getElementById("txt6");
+          var u=/[a-zA-Z]+$/;
+          if(n5.value == "")
+          {
+            document.getElementById("consid5").innerHTML = "<span class='error'>Please enter a valid username </span>";
+
+                return false;
+        }
+        if(!n5.value.match(u))
+        {
+          document.getElementById("consid5").innerHTML = "<span class='error'>This is not a valid Username. Please try again</span>";
+          document.getElementById("txt6").value="";
+              return false;
+        }
+        else if(n5.value.match(u))
+            {
+              document.getElementById("consid5").innerHTML = "<span class='error'></span>";
+                  return false;
+            }
+        }
+        function mypassword()
+        {
+          var n6=document.getElementById("txt7");
+          var ps=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}/;
+          if(n6.value == "")
+          {
+            document.getElementById("consid7").innerHTML = "<span class='error'>Please enter a valid password</span>";
+
+                return false;
+        }
+        if(!n6.value.match(ps))
+        {
+          document.getElementById("consid7").innerHTML = "<span class='error'>This is not a valid Password. Please try again</span>";
+          document.getElementById("txt7").value="";
+              return false;
+        }
+        else if(n6.value.match(ps))
+            {
+              document.getElementById("consid7").innerHTML = "<span class='error'></span>";
+                  return false;
+            }
+        }
+        function mycpassword()
+        {
+          var n7=document.getElementById("txt7");
+          var n8=document.getElementById("txt8");
+          if(n8.value == "")
+          {
+            document.getElementById("consid8").innerHTML = "<span class='error'>Please enter a valid password</span>";
+
+                return false;
+        }
+        if(n7.value==n8.value)
+        {
+
+          document.getElementById("consid8").innerHTML = "<span class='error'></span>";
+
+              return false;
+        }
+        else {
+          document.getElementById("consid8").innerHTML = "<span class='error'> Password Missmatch</span>";
+          document.getElementById("txt7").value="";
+          document.getElementById("txt8").value="";
+
+              return false;
+        }
+  }
+  </script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body background="auto.jpg">
+   <form method="POST" action="addreg.php">
+                 <center>
+                 REGISTRATION FORM
+                 <center><a href="login.html">Login Page</a></center>
+                 <table>
+                  <tr>
+                  <td><label for="txt1"> Name</label></td>
+                  <td><input type="text" id="txt1" class="form-control" name='name' placeholder="First name" onkeypress="return /[a-zA-Z ]/i.test(event.key)" required autofocus="autofocus" onblur="myname()"><br><span id = "consid"></span></td>
+                  </tr>
+                  <tr>
+                      <td> <label for="textarea1">Address</label></td>
+                      <td> <input type="textarea"  id="textarea1" class="form-control" name='address' onkeypress="return /[a-zA-Z(), ]/i.test(event.key)" placeholder="Address" required onblur="myaddress()"><br>
+                      <span id = "consid3"></span></td></br></br>
+                  </tr>
+                  <tr>
+                      <td><label for="inputEmail">Email address</label></td>
+                      <td><input type="email" id="inputEmail" class="form-control" name='email' placeholder="Email address" required onblur=" myemail()"><br>
+                      <span id = "consid4"></span></td>
+                  </tr>
+             <tr>
+                 <td>
+                   <label for="phno">Phone</label>
+                 </td>
+                 <td>
+              <input type="text" id="phno" class="form-control" onkeypress="return /[0-9]/i.test(event.key)" placeholder="Phone" name='phone' required onblur="myphno()"><br>
+              <span id = "consid6"></span></td>
+             </tr>
+                 <tr>
+                    <td>
+                     <label for="txt6">UserName </label>
+                    </td>
+                     <td>
+                         <input type="text"  id="txt6" class="form-control" name='username' placeholder="UserName" required onblur="myusername()"><br>
+                          <span id = "consid5"></span>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                        <label for="txt7">Password</label>
+                     </td>
+                     <td>
+                        <input type="password" id="txt7" class="form-control" name='password' placeholder="Password" required onblur="mypassword()"><br>
+                        <span id = "consid7"></span>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                        <label for="txt8">Confirm password</label>
+                     </td>
+                     <td>
+                       <input type="password" id="txt8" class="form-control" placeholder="Confirm password" required onblur="mycpassword()"><br>
+                       <span id = "consid8"></span>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td colspan="2">
+                         <center><button class="btn btn-primary btn-block" href="login.html">Register</button></center>
+                     </td>
+                 </tr>
+          </table>
+       </center>
+        </form>
+    </body>
+</html>
