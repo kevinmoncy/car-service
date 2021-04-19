@@ -47,6 +47,7 @@ else
 				<li><a href="#" onclick="document.getElementById('tbl').style.display='none';document.getElementById('tbl1').style.display='block';"><span>BOOKINGS</span></a></li>
 				<li><a href=""><span>VEHICLE MANAGEMENT</span></a></li>
 				<li><a href="advisorreg.php"><span>ADVISOR REGISTRATION</span></a></li>
+                <li><a href="areport.php"><span>REPORTS</span></a></li>
 				<li><a href="logout.php">Logout</a></li>
 			</ul>
 		</div>

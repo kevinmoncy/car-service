@@ -19,7 +19,7 @@ else
   <meta name="author" content="Diego Velázquez">
   <meta name="description" content="Tablero con Bootstrap 4 - Webook">
 
-  <title>Customer</title>
+  <title>ADVISOR</title>
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,20 +42,22 @@ else
     <!-- Sidebar -->
     <div id="sidebar-container" class="bg-light border-right">
       <div class="logo">
-        <h4 class="font-weight-bold mb-0"><a href="admin_dashboard.php">WELCOME</a></h4>
+        <h4 class="font-weight-bold mb-0"><a href="advisor.php">WELCOME</a></h4>
       </div>
       <div class="menu list-group-flush">
-          <a href="ubooking.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
-          <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> VEHICLE STATUS</a>
-          <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATION</a>
-          <a href="uaccdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> ACCOUNT DETAILS</a>
+        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
+        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> CUSTOMER DETAILS</a>
+        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">CAR MANAGEMENT</a>
+		<a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">SERVICES</a>
+        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
+
       </div>
     </div>
     <!-- Fin sidebar -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper" class="w-100 bg-light-blue">
-
+<p>Bookings are full!!!!</p>
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container">
 
@@ -82,39 +84,10 @@ else
           </div>
         </div>
       </nav>
-<!--
-        <div>
-           <form action="notifi.php" method="post">  
-<input type="text" id= txt1 name='txt1' required>
-        <input type="submit">
-              </form>
-               </div>s
--->
-            
-            
+
       <div id="content" class="container-fluid p-5">
-          
         <section class="py-3">
-
-			<?php
-				$sql2="select * from tbl_slot where reg_id=(select reg_id from tbl_reg where login_id='$id')";
-				$res6=mysqli_query($con,$sql2);
-				if(mysqli_num_rows($res6)>0)
-				{
-					while($row3=mysqli_fetch_array($res6))
-					{
-						if($row3['status']==1)
-						{
-							echo "Your request has been approved";
-						}
-						else if($row3['status']==0)
-						{
-							echo "Your request not approved";
-						}
-					}
-				}
-
-			?>
+          <!-- Highlights -->
 
 
         </section>

@@ -45,11 +45,11 @@ else
         <h4 class="font-weight-bold mb-0"><a href="advisor.php">WELCOME</a></h4>
       </div>
       <div class="menu list-group-flush">
-        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
-        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> CUSTOMER DETAILS</a>
-        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">CAR MANAGEMENT</a>
-		<a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">SERVICES</a>
-        <a href="" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
+        <a href="adbooking.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
+        <a href="adcustdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> CUSTOMER DETAILS</a>
+        <a href="adcarmana.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">CAR MANAGEMENT</a>
+		<a href="adservice.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">SERVICES</a>
+        <a href="adnotifi.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
 
       </div>
     </div>
