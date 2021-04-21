@@ -21,7 +21,7 @@ else
 		 body
 		 {
 			 min-height: 100vh;
-			 background-image: url( "images/admin.jpg");
+			 background-image: url( "images/admin1.jpg");
 			 background-size: cover;
 			 background-repeat: no-repeat;
 			 background-position: center;
@@ -49,6 +49,7 @@ else
 				<li><a href="advisorreg.php"><span>ADVISOR REGISTRATION</span></a></li>
                 <li><a href="areport.php"><span>REPORTS</span></a></li>
 				<li><a href="logout.php">Logout</a></li>
+                
 			</ul>
 		</div>
 		<?php

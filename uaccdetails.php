@@ -9,6 +9,10 @@ else
 {
 	$id=$_SESSION['loginid'];
     ?>
+<script>
+        console.log("<?php echo $_SESSION['loginid']; ?>");
+      
+        </script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,6 +24,8 @@ else
   <meta name="description" content="Tablero con Bootstrap 4 - Webook">
 
   <title>Customer</title>
+  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +78,7 @@ else
                   Account Settings
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal">change password</a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#EdiPassModal">change password</a>
 
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#" data-target=".bs-example-modal-sm" data-toggle="modal">Log Out</a>
@@ -123,7 +129,7 @@ else
   <!-- Fin wrapper -->
 
   <!-- Bootstrap y JQuery -->
-  <script src="js/jquery.js"></script>
+  
   <script src="js/bootstrap.min.js"></script>
 
   <!-- Abrir / cerrar menu -->
@@ -135,30 +141,40 @@ else
   </script>
 
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Changing Password</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="current password">
-         <br>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="new password">
-                  <br>
-                           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="confirm your new password ">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+    
+    <!-- edit password Modal  -->
+<div class="modal fade" id="EdiPassModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <form action="resetPass.php" method="POST">
+      <!-- Modal body -->
+      <div class="modal-body">
+            <input class="form-control" type="password" name="cpass1" id="cpass1"   placeholder="Enter Current Password" required>
+            <span id="msg1"></span>
+            <br>
+                <input class="form-control" type="password" name="npass1" id="npass1"  disabled oninput="valFPasswod()" placeholder="New Password" required>
+            <br>
+                <input class="form-control" type="password" name="ncpass1" id="ncpass1"  disabled="true" oninput="valCFPasswod()"  placeholder="Confirm New Password" required>
+            <br>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <input type="submit" value="Update" id="Epass" disabled class="btn btn-primary" />
+      </div>
+      </form>
     </div>
   </div>
-
+</div>
+<!-- edit password Modal  ends -->
+    
+    
 
   <div tabindex="-1" class="modal bs-example-modal-sm" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -169,6 +185,92 @@ else
     </div>
   </div>
 </div>
+
+    <script>										
+
+											
+$(document).ready(function(){
+  $("#cpass1").blur(function(){
+      
+    var pass1 = $("#cpass1").val();
+      alert(pass1);
+        $.ajax({
+                url:"EditPassword.php",
+                method:"post",
+                data:{pass:pass1},
+                success:function(data){
+                if(data==1)
+                    {
+                        alert("if");
+                    $("#npass1").removeAttr("disabled");
+                    $("#ncpass1").removeAttr("disabled");
+                    }
+                    if(data==0)
+                    {
+                        alert("2");
+                    $("#npass1").attr("disabled", "disabled");
+                    $("#ncpass1").attr("disabled", "disabled");
+                    }
+                }
+           });
+  });
+});
+
+function checkPassword(text){
+    return (/^.{8,}$/.test(text));
+}
+var t=[0,0];
+
+function valFPasswod()
+    {
+        var mu = document.getElementsByName('npass1')[0];
+            if (checkPassword(mu.value)){
+                document.getElementById("npass1").style.borderColor = "green";
+                t[0]=1;
+            }
+            else
+                {
+                document.getElementById("npass1").style.borderColor = "red";
+                t[0]=0;
+            }
+        button2();
+    }
+
+function valCFPasswod()
+    {
+        var mc = document.getElementsByName('ncpass1')[0];
+        var mu = document.getElementsByName('npass1')[0];
+            if ((checkPassword(mc.value))&&(mc.value == mu.value)&&(mc.value!= null)){
+                document.getElementById("ncpass1").style.borderColor = "green";
+                t[1]=1;
+            }
+            else
+                {
+                document.getElementById("ncpass1").style.borderColor = "red";
+                t[1]=0;
+            }
+        button2();
+    }
+
+function button2()
+{
+    var l = t.length;
+    var s=0;
+    for(var i=0;i<l;i++)
+    {
+        s=s+t[i];
+    }
+    if(l==s)
+    {
+        document.getElementById("Epass").disabled = false;
+    }
+    else
+    {
+         document.getElementById("Epass").disabled = true;
+    }
+}
+
+</script>
 
 
 </body>

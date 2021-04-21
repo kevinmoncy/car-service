@@ -42,7 +42,7 @@ else
     <!-- Sidebar -->
     <div id="sidebar-container" class="bg-light border-right">
       <div class="logo">
-        <h4 class="font-weight-bold mb-0"><a href="">WELCOME</a></h4>
+        <h4 class="font-weight-bold mb-0"><a href="admin.php">WELCOME</a></h4>
       </div>
 
     </div>

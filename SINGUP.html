@@ -71,7 +71,7 @@ font-size:15px;
         function myphno()
         {
           var n4=document.getElementById("phno");
-          var p= /^[0-9]{1,10}$/;
+          var p=/^(6|7|8|9)[0-9]{9}$/;
           if(n4.value == "")
           {
             document.getElementById("consid6").innerHTML = "<span class='error'>Please enter a valid Phone number</span>";
