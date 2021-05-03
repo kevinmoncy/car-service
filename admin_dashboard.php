@@ -36,7 +36,7 @@ else
 </head>
 
 <body>
-
+    
   <div class="d-flex" id="content-wrapper">
 
     <!-- Sidebar -->
@@ -49,6 +49,7 @@ else
         <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> VEHICLE STATUS</a>
         <a href="notification.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
         <a href="uaccdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> ACCOUNT DETAILS</a>
+          <a href="uprofile.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> EDIT YOUR PROFILE</a>
 
       </div>
     </div>
@@ -84,6 +85,14 @@ else
         </div>
       </nav>
 
+        <div><h1><center>WELCOME TO AUTO GENIUS FAMILY</center></h1></div>
+        <div><p><center><b>Now you are a part of the <strong>best service team </strong>in the town</b></center></p></div>
+        <div>
+<!--
+            <img src="images/p-2.jpg" width="500" height="500">
+            <img src="images/car1.jpg" width="400" height="500">
+-->
+        </div>
       <div id="content" class="container-fluid p-5">
         <section class="py-3">
           <!-- Highlights -->

@@ -18,10 +18,10 @@ $regno=$row['reg_id'];
 $q1="INSERT INTO `tbl_slot`(`reg_id`, `vregno`, `vmodel`, `mileage`,`date`,`time`) VALUES ($regno,'$vreg','$vname',$vkm,'$date','$time')";
 if(mysqli_query($con,$q1))
 {
-    echo"success";
+    echo "success";
 }
 else {
-    echo"fail";
+    echo "fail";
 }
 mysqli_close($con);
 ?>

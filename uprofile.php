@@ -19,7 +19,7 @@ else
   <meta name="author" content="Diego Velázquez">
   <meta name="description" content="Tablero con Bootstrap 4 - Webook">
 
-  <title>ADVISOR</title>
+  <title>Customer</title>
 
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,15 +42,14 @@ else
     <!-- Sidebar -->
     <div id="sidebar-container" class="bg-light border-right">
       <div class="logo">
-        <h4 class="font-weight-bold mb-0"><a href="advisor.php">WELCOME</a></h4>
+        <h4 class="font-weight-bold mb-0"><a href="admin_dashboard.php">WELCOME</a></h4>
       </div>
       <div class="menu list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
-        <a href="adcustdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> CUSTOMER DETAILS</a>
-        <a href="adcarmana.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">CAR MANAGEMENT</a>
-		<a href="adservice.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">SERVICES</a>
-        <a href="adnotifi.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
-
+          <a href="ubooking.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> BOOKINGS</a>
+          <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> VEHICLE STATUS</a>
+          <a href="notification.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
+          <a href="uaccdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> ACCOUNT DETAILS</a>
+         <a href="uprofile.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> EDIT YOUR PROFILE</a>
       </div>
     </div>
     <!-- Fin sidebar -->
@@ -88,7 +87,65 @@ else
       <div id="content" class="container-fluid p-5">
         <section class="py-3">
           <!-- Highlights -->
+          <div class="row">
+            <div class="col-md-12">
 
+
+
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Address </label> -->
+            <!-- <input type="text" class="form-control" id="address" placeholder="" required> -->
+            <!-- <textarea class="form-control" id="address" rows="4" cols="50" required>Enter Address</textarea> -->
+            <!-- <small class="form-text text-muted">Street Address</small> -->
+          </div>
+          <!-- <div class="form-group">
+            <input type="text" class="form-control" id="address" required>
+            <small class="form-text text-muted">Street Address Line 2 </small>
+          </div> -->
+          <div class="row">
+
+
+                  <!-- <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div> -->
+                </div>
+<!--
+               <h4 class="mb-3">Vehicle Details</h4>
+               <form method="POST" action="book.php">
+
+             <div class="form-group">
+            <label for="exampleInputEmail">Vehicle Registration No</label>
+            <input type="text" class="form-control" id="vreg" name="vreg" onkeypress="return /[0-9A-Z-]/i.test(event.key)" placeholder="KL-57-E-5678" required>
+            </div>
+
+            <div class="form-group">
+           <label for="exampleInputEmail5">Vehicle Name and Model</label>
+           <input type="text" class="form-control" id="vname" name="vname" onkeypress="return /[0-9A-Z ]/i.test(event.key)" placeholder="Tata Nexon - DLX" required>
+           </div>
+
+           <div class="form-group">
+          <label for="exampleInputEmail4">Mileage</label>
+          <input type="text" class="form-control" id="vkm" name="vkm" onkeypress="return /[0-9]/i.test(event.key)" placeholder="Kilometer Done" required>
+          </div>
+          <div class="form-group">
+         <label for="exampleInputEmail6">Date</label>
+         <input type="date" class="form-control" id="date1" name="datename1"   required>
+         </div>
+         <div class="form-group">
+        <label for="exampleInputEmail7">Time</label>
+        <input type="time" class="form-control" id="time1" name="timename1"   required>
+        </div>
+
+        <hr class="mb-4">
+          <input type="submit" class="btn btn-primary btn-lg btn-block" value="submit" />
+          </form>
+            </div>
+          </div>
+-->
 
         </section>
       </div>
@@ -120,11 +177,11 @@ else
           </button>
         </div>
         <div class="modal-body">
-         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="current password">
+         <input type="text" class="form-control" id="exampleInputPassword10" placeholder="current password">
          <br>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="new password">
+                  <input type="text" class="form-control" id="exampleInputPassword11" placeholder="new password">
                   <br>
-                           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="confirm your new password ">
+                           <input type="text" class="form-control" id="exampleInputPassword12" placeholder="confirm your new password ">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

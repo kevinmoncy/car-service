@@ -57,7 +57,7 @@ else
 
     <!-- Page Content -->
     <div id="page-content-wrapper" class="w-100 bg-light-blue">
-<p>customer details are shown</p>
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container">
 

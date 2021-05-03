@@ -42,15 +42,35 @@ else
 			<h1><center><b>ADMIN</b></center></h1>
 		</div>
 		<div class="menu">
-			<ul>
-				<li><a href="#" onclick="document.getElementById('tbl').style.display='block';document.getElementById('tbl1').style.display='none';"><span>CUSTOMER DETAILS</span></a></li>
-				<li><a href="#" onclick="document.getElementById('tbl').style.display='none';document.getElementById('tbl1').style.display='block';"><span>BOOKINGS</span></a></li>
-				<li><a href=""><span>VEHICLE MANAGEMENT</span></a></li>
-				<li><a href="advisorreg.php"><span>ADVISOR REGISTRATION</span></a></li>
-                <li><a href="areport.php"><span>REPORTS</span></a></li>
-				<li><a href="logout.php">Logout</a></li>
+<!--			<ul>-->
+				<a href="#" onclick="document.getElementById('tbl').style.display='block';document.getElementById('tbl1').style.display='none';"><span>CUSTOMER DETAILS</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+				<a href="#" onclick="document.getElementById('tbl').style.display='none';document.getElementById('tbl1').style.display='block';"><span>BOOKINGS</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+				<a href=""><span>VEHICLE MANAGEMENT</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+				<a href="advisorreg.php"><span>ADVISOR REGISTRATION</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+                <a href="areport.php"><span>REPORTS</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+            <a href="#" onclick="document.getElementById('tbl').style.display='block';document.getElementById('tbl1').style.display='none';">
+               <span>NOTIFICATIONS</span></a>
+             &nbsp;
+             &nbsp;
+             &nbsp;
+				<a href="logout.php">Logout</a>
                 
-			</ul>
+<!--			</ul>-->
 		</div>
 		<?php
 		$sql1="select * from tbl_reg";
@@ -98,8 +118,8 @@ else
 		$regno=$row1['reg_id'];
 		$name=$row1['name'];
 
-
-		$sql1="SELECT * FROM `tbl_slot` WHERE `reg_id`=$regno";
+            $sql1="SELECT * FROM `tbl_slot`";
+//		$sql1="SELECT * FROM `tbl_slot` WHERE `reg_id`=$regno"; 
 		$res1=mysqli_query($con,$sql1);
 
 		while($row=mysqli_fetch_array($res1))
@@ -120,6 +140,7 @@ else
 	}
 		echo"  </table>";
 		?>
+        
 	</body>
 <script>
 function setaction(id,button)

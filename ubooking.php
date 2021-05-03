@@ -49,6 +49,8 @@ else
           <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> VEHICLE STATUS</a>
           <a href="notification.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0">NOTIFICATIONS</a>
           <a href="uaccdetails.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> ACCOUNT DETAILS</a>
+        <a href="uprofile.php" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> EDIT YOUR PROFILE</a>
+
       </div>
     </div>
     <!-- Fin sidebar -->
